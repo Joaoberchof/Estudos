@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País</title>
+
+</head>
+<body>
+    Digite o pais em que você mora: <input type="pais" id="pais"> 
+    <input type="button" value="Resultado" onclick="resultado()" > 
+    <div id="nat"></div>
+
+    <script>
+        function resultado () {
+         var pais = document.getElementById('pais')
+         var nat = document.getElementById('nat')
+         var p = String (pais.value)
+            nat.innerHTML = `<p>O pais que você mora: ${p}</p>`
+            if (p == "Brasil"){ nat.innerHTML += `<p>Você é Brasileiro.</p>`
+        } else { nat.innerHTML += `Você não é Brasileiro.`}
+        
+    }
+    </script>
+    
+</body>
+</html>
